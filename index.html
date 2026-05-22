@@ -453,6 +453,67 @@
     line-height: 1.7;
   }
 
+  /* BADGES — ikonki na liście */
+  .track-badges {
+    display: flex;
+    gap: 0.45rem;
+    margin-top: 0.55rem;
+  }
+
+  .track-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 3px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.25s, transform 0.2s;
+  }
+
+  .track-badge:hover { opacity: 1; transform: translateY(-1px); }
+  .track-badge svg { width: 11px; height: 11px; flex-shrink: 0; }
+
+  .track-badge-yt {
+    background: rgba(255,60,60,0.1);
+    color: #ff5555;
+    border: 1px solid rgba(255,60,60,0.22);
+  }
+
+  .track-badge-sp {
+    background: rgba(30,215,96,0.08);
+    color: #1ed760;
+    border: 1px solid rgba(30,215,96,0.2);
+  }
+
+  /* IFRAME wideo */
+  .track-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-bottom: 1.8rem;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #000;
+  }
+
+  .track-video iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+
+  .track-spotify {
+    margin-top: 1.8rem;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
   /* LYRIC HIGHLIGHT SECTIONS */
   .lyric-feature {
     max-width: 1200px;
@@ -917,8 +978,16 @@
       <div class="track-num">01</div>
       <div class="track-info">
         <div class="track-title">Nie słuchaj bomb</div>
-        <div class="track-subtitle">Utwór tytułowy — emocjonalny rdzeń albumu</div>
+        <div class="track-badges">
+          <a class="track-badge track-badge-yt" href="https://youtu.be/3oGIHxg3Kf4" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Obejrzyj wideo">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+            YouTube
+          </a>
+        </div>
         <div class="track-preview">
+          <div class="track-video">
+            <iframe data-src="https://www.youtube.com/embed/3oGIHxg3Kf4?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
           <div class="track-epigraph">„Zasnąłem. Obudziłem się, uśmiechnąłem się, wstałem i przeczytałem do 25 strony. I tak minął mój dzień. Moje dwa psy zdechły, tak samo jak moja babcia Halusia i moje ukochane miasto Mariupol." — Jegor, 8 lat.</div>
           <div class="track-lyrics">Syneczku śpij, nie słuchaj bomb,
 To tylko burza ci się śni
@@ -952,8 +1021,20 @@ Córeczko nie płacz, uśnij już…</div>
       <div class="track-num">02</div>
       <div class="track-info">
         <div class="track-title">Ten czas</div>
-        <div class="track-subtitle">Adaptacja wiersza Krzysztofa Kamila Baczyńskiego · Pierwszy singiel</div>
+        <div class="track-badges">
+          <a class="track-badge track-badge-yt" href="https://youtu.be/B-VOU-PZ76A" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Obejrzyj wideo">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+            YouTube
+          </a>
+          <a class="track-badge track-badge-sp" href="https://open.spotify.com/track/0MGM7CUNfSjm6TUe9Q8xFm" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Słuchaj na Spotify">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.28c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.54-1.26.24-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-.96-.12-1.08-.6-.12-.48.12-.96.6-1.08 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.18 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+            Spotify
+          </a>
+        </div>
         <div class="track-preview">
+          <div class="track-video">
+            <iframe data-src="https://www.youtube.com/embed/B-VOU-PZ76A?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
           <div class="track-lyrics">Miła moja, kochana, taki to mroczny czas.
 Ciemna noc, tak już dawno ciemna noc, a bez gwiazd,
 po której drzew upiory wydarte ziemi — drżą.
@@ -975,6 +1056,9 @@ I płynie mrok. Jest cisza. Łamanych czaszek trzask…
 
 Nie stanie naszych serc. Taki to mroczny czas.</div>
           <div class="track-context">Otwiera kampanię nie jako historyczna stylizacja, lecz jako głos, który z niepokojącą aktualnością wybrzmiewa dziś na nowo. Baczyński pisał w 1942 roku — i pisał o teraz.</div>
+          <div class="track-spotify">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0MGM7CUNfSjm6TUe9Q8xFm?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
         </div>
       </div>
       <div class="track-toggle"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></div>
@@ -985,7 +1069,6 @@ Nie stanie naszych serc. Taki to mroczny czas.</div>
       <div class="track-num">03</div>
       <div class="track-info">
         <div class="track-title">Piętno</div>
-        <div class="track-subtitle">Trzy dramaty — Mariupol, Morze Śródziemne, las na Podlasiu</div>
         <div class="track-preview">
           <div class="track-lyrics">W mieście jaśminu poznałem Cię, w mieście jaśminu
 Praca, dzieci, miłość, świat bez wielkich czynów,
@@ -1031,8 +1114,16 @@ O miłość, co piętno kainowe, na zawsze zetrzeć zdoła</div>
       <div class="track-num">04</div>
       <div class="track-info">
         <div class="track-title">Idol</div>
-        <div class="track-subtitle">Trzeci singiel · Samples z Wyspy Wężowej, 24.02.2022</div>
+        <div class="track-badges">
+          <a class="track-badge track-badge-yt" href="https://youtu.be/CnKPJcVATRA" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Obejrzyj wideo">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+            YouTube
+          </a>
+        </div>
         <div class="track-preview">
+          <div class="track-video">
+            <iframe data-src="https://www.youtube.com/embed/CnKPJcVATRA?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
           <div class="track-epigraph">Русский военный корабль, иди на хуй! — odpowiedź ukraińskich żołnierzy z Wyspy Wężowej na wezwanie do kapitulacji przekazane przez rosyjski krążownik Moskwa, 24 lutego 2022.</div>
           <div class="track-lyrics">Idol ze sceny rzuca mocne słowa
 Jego wiara jest piękna jak bomba atomowa
@@ -1070,8 +1161,16 @@ Twój Idol!</div>
       <div class="track-num">05</div>
       <div class="track-info">
         <div class="track-title">Elegia</div>
-        <div class="track-subtitle">Do słów wiersza „Elegia o… [chłopcu polskim]" Baczyńskiego</div>
+        <div class="track-badges">
+          <a class="track-badge track-badge-yt" href="https://youtu.be/KpAZr17OZJM" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Obejrzyj wideo">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+            YouTube
+          </a>
+        </div>
         <div class="track-preview">
+          <div class="track-video">
+            <iframe data-src="https://www.youtube.com/embed/KpAZr17OZJM?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
           <div class="track-lyrics">Oddzielili cię syneczku od snów co jak motyl drżą,
 haftowali ci syneczku smutne oczy rudą krwią,
 malowali krajobrazy w żółte ściegi pożóg,
@@ -1097,7 +1196,6 @@ Czy to była kula synku, czy to serce pękło?</div>
       <div class="track-num">06</div>
       <div class="track-info">
         <div class="track-title">Jesień</div>
-        <div class="track-subtitle">O stracie, czasie i nieuchronności</div>
         <div class="track-preview">
           <div class="track-lyrics">Jesień opada na miasto
 obłokiem szarej mgły
@@ -1128,7 +1226,6 @@ Jesień ogarnia cię…</div>
       <div class="track-num">07</div>
       <div class="track-info">
         <div class="track-title">Nim się nocą wieczór stanie</div>
-        <div class="track-subtitle">O pokorze, granicach i zrzuceniu zbroi pychy</div>
         <div class="track-preview">
           <div class="track-lyrics">Nie ufaj nikomu kto nie wkroczył w smugę cienia,
 Bo w smudze cienia sprawy zmieniają znaczenia,
@@ -1159,7 +1256,6 @@ Nim się nocą wieczór stanie…</div>
       <div class="track-num">08</div>
       <div class="track-info">
         <div class="track-title">Notatki</div>
-        <div class="track-subtitle">Adaptacja Gałczyńskiego · „Notatki z nieudanych rekolekcji paryskich"</div>
         <div class="track-preview">
           <div class="track-lyrics">Ziemia i niebo przemijają,
 Chwieją się fundamenty światów
@@ -1360,8 +1456,14 @@ Odpowie nocą mediolańską
   // Track toggle
   function toggleTrack(el) {
     const isOpen = el.classList.contains('open');
-    document.querySelectorAll('.track-item.open').forEach(t => t.classList.remove('open'));
-    if (!isOpen) el.classList.add('open');
+    document.querySelectorAll('.track-item.open').forEach(t => {
+      t.classList.remove('open');
+      t.querySelectorAll('iframe[data-src]').forEach(f => { f.src = ''; });
+    });
+    if (!isOpen) {
+      el.classList.add('open');
+      el.querySelectorAll('iframe[data-src]').forEach(f => { f.src = f.dataset.src; });
+    }
   }
 
   // Manifest accordion — toggle
