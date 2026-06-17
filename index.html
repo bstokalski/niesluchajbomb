@@ -339,6 +339,7 @@
     background: rgba(200,56,42,0.03);
     opacity: 0;
     transition: opacity 0.4s;
+    pointer-events: none;
   }
 
   .track-item:hover::before { opacity: 1; }
@@ -509,7 +510,8 @@
   }
 
   .track-spotify {
-    margin-top: 1.8rem;
+    position: relative;
+    margin: 0 0 1.8rem;
     border-radius: 12px;
     overflow: hidden;
   }
@@ -701,6 +703,43 @@
   .credit-value {
     color: var(--white);
     font-family: 'Source Serif 4', serif;
+  }
+
+  /* PATRONAT */
+  .patronage-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 3rem 6rem;
+    text-align: center;
+  }
+
+  .patronage-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    color: var(--ecru-dim);
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+
+  .patronage-logo-link {
+    display: inline-block;
+    background: #ffffff;
+    padding: 0.9rem 1.4rem;
+    border-radius: 8px;
+    opacity: 0.92;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .patronage-logo-link:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+
+  .patronage-logo-link img {
+    height: 56px;
+    width: auto;
+    display: block;
   }
 
   /* FOOTER */
@@ -983,10 +1022,17 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
             YouTube
           </a>
+          <a class="track-badge track-badge-sp" href="https://open.spotify.com/album/1bGf2Qn0ygcJn3Kd9Jdbgw?si=P0D0QqCyRJGtgghox2shbQ" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Słuchaj na Spotify">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.28c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.54-1.26.24-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-.96-.12-1.08-.6-.12-.48.12-.96.6-1.08 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.18 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+            Spotify
+          </a>
         </div>
         <div class="track-preview">
-          <div class="track-video">
+          <div class="track-video" onclick="event.stopPropagation()">
             <iframe data-src="https://www.youtube.com/embed/3oGIHxg3Kf4?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="track-spotify" onclick="event.stopPropagation()">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/1bGf2Qn0ygcJn3Kd9Jdbgw?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
           <div class="track-epigraph">„Zasnąłem. Obudziłem się, uśmiechnąłem się, wstałem i przeczytałem do 25 strony. I tak minął mój dzień. Moje dwa psy zdechły, tak samo jak moja babcia Halusia i moje ukochane miasto Mariupol." — Jegor, 8 lat.</div>
           <div class="track-lyrics">Syneczku śpij, nie słuchaj bomb,
@@ -1032,8 +1078,11 @@ Córeczko nie płacz, uśnij już…</div>
           </a>
         </div>
         <div class="track-preview">
-          <div class="track-video">
+          <div class="track-video" onclick="event.stopPropagation()">
             <iframe data-src="https://www.youtube.com/embed/B-VOU-PZ76A?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="track-spotify" onclick="event.stopPropagation()">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0MGM7CUNfSjm6TUe9Q8xFm?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
           <div class="track-lyrics">Miła moja, kochana, taki to mroczny czas.
 Ciemna noc, tak już dawno ciemna noc, a bez gwiazd,
@@ -1056,9 +1105,6 @@ I płynie mrok. Jest cisza. Łamanych czaszek trzask…
 
 Nie stanie naszych serc. Taki to mroczny czas.</div>
           <div class="track-context">Otwiera kampanię nie jako historyczna stylizacja, lecz jako głos, który z niepokojącą aktualnością wybrzmiewa dziś na nowo. Baczyński pisał w 1942 roku — i pisał o teraz.</div>
-          <div class="track-spotify">
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0MGM7CUNfSjm6TUe9Q8xFm?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
         </div>
       </div>
       <div class="track-toggle"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></div>
@@ -1119,10 +1165,17 @@ O miłość, co piętno kainowe, na zawsze zetrzeć zdoła</div>
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
             YouTube
           </a>
+          <a class="track-badge track-badge-sp" href="https://open.spotify.com/album/0z2RFdBeYd5pjFrLWAztjD?si=D3TvboA9R-KYWLW6fZvLJA" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Słuchaj na Spotify">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.28c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.54-1.26.24-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-.96-.12-1.08-.6-.12-.48.12-.96.6-1.08 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.18 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+            Spotify
+          </a>
         </div>
         <div class="track-preview">
-          <div class="track-video">
+          <div class="track-video" onclick="event.stopPropagation()">
             <iframe data-src="https://www.youtube.com/embed/CnKPJcVATRA?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="track-spotify" onclick="event.stopPropagation()">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/0z2RFdBeYd5pjFrLWAztjD?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
           <div class="track-epigraph">Русский военный корабль, иди на хуй! — odpowiedź ukraińskich żołnierzy z Wyspy Wężowej na wezwanie do kapitulacji przekazane przez rosyjski krążownik Moskwa, 24 lutego 2022.</div>
           <div class="track-lyrics">Idol ze sceny rzuca mocne słowa
@@ -1168,7 +1221,7 @@ Twój Idol!</div>
           </a>
         </div>
         <div class="track-preview">
-          <div class="track-video">
+          <div class="track-video" onclick="event.stopPropagation()">
             <iframe data-src="https://www.youtube.com/embed/KpAZr17OZJM?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="track-lyrics">Oddzielili cię syneczku od snów co jak motyl drżą,
@@ -1433,6 +1486,14 @@ Odpowie nocą mediolańską
       <div class="credit-value">Radiokomunikacja z Wyspy Wężowej, 24.02.2022 · Roman Hrybow</div>
     </div>
   </div>
+</section>
+
+<!-- PATRONAT -->
+<section class="patronage-section reveal">
+  <p class="patronage-label">Patronat medialny</p>
+  <a class="patronage-logo-link" href="https://adamdobrzynski.blogspot.com" target="_blank" rel="noopener" title="ALE MUZYKA — Adam Dobrzyński">
+    <img src="./alemuzyka-logo.png" alt="ALE MUZYKA — Adam Dobrzyński">
+  </a>
 </section>
 
 <!-- FOOTER -->
